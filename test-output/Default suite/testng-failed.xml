@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="PROJECT.PROJECT.problem01">
+      <class name="Selenium.BasicElement">
         <methods>
           <include name="endsetUp"/>
-          <include name="clickElements"/>
           <include name="setUp"/>
-          <include name="OpenSiteDemoQA"/>
+          <include name="clickElements"/>
         </methods>
-      </class> <!-- PROJECT.PROJECT.problem01 -->
+      </class> <!-- Selenium.BasicElement -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

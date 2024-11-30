@@ -48,7 +48,7 @@ to have all unique values with 5 or less operations.*/
 				int key = entry.getKey()+1;
 				int value = entry.getValue()-1;
 				System.out.println("key---value--"+key+"-"+value);
-				if(map.containsKey(key)) {
+				if(map.containsKey(key)) {	
 					map.put(key, map.get(key)+value);
 				}
 				else {
