@@ -6,8 +6,10 @@
       <class name="Selenium.BasicElement">
         <methods>
           <include name="endsetUp"/>
-          <include name="setUp"/>
           <include name="clickElements"/>
+          <include name="setUp"/>
+          <include name="OpenSiteDemoQA"/>
+          <include name="closeBrowser"/>
         </methods>
       </class> <!-- Selenium.BasicElement -->
     </classes>
