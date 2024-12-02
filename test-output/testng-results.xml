@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-30T21:19:51 IST" name="Default suite" finished-at="2024-11-30T21:21:21 IST" duration-ms="89841">
+  <suite started-at="2024-11-30T22:19:06 IST" name="Default suite" finished-at="2024-11-30T22:19:27 IST" duration-ms="21402">
     <groups>
     </groups>
-    <test started-at="2024-11-30T21:19:51 IST" name="Default test" finished-at="2024-11-30T21:21:21 IST" duration-ms="89841">
+    <test started-at="2024-11-30T22:19:06 IST" name="Default test" finished-at="2024-11-30T22:19:27 IST" duration-ms="21402">
       <class name="Selenium.BasicElement">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Selenium.BasicElement@3f6db3fb]" started-at="2024-11-30T21:19:51 IST" name="setUp" finished-at="2024-11-30T21:19:51 IST" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Selenium.BasicElement@3f6db3fb]" started-at="2024-11-30T22:19:06 IST" name="setUp" finished-at="2024-11-30T22:19:06 IST" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="OpenSiteDemoQA()[pri:1, instance:Selenium.BasicElement@3f6db3fb]" started-at="2024-11-30T21:19:51 IST" name="OpenSiteDemoQA" finished-at="2024-11-30T21:19:58 IST" duration-ms="7018" status="PASS">
+        <test-method signature="OpenSiteDemoQA()[pri:1, instance:Selenium.BasicElement@3f6db3fb]" started-at="2024-11-30T22:19:06 IST" name="OpenSiteDemoQA" finished-at="2024-11-30T22:19:16 IST" duration-ms="9867" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenSiteDemoQA -->
-        <test-method signature="clickElements()[pri:2, instance:Selenium.BasicElement@3f6db3fb]" started-at="2024-11-30T21:19:58 IST" name="clickElements" finished-at="2024-11-30T21:21:21 IST" duration-ms="82804" status="PASS">
+        <test-method signature="clickElements()[pri:2, instance:Selenium.BasicElement@3f6db3fb]" started-at="2024-11-30T22:19:16 IST" name="clickElements" finished-at="2024-11-30T22:19:27 IST" duration-ms="11511" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickElements -->
-        <test-method is-config="true" signature="endsetUp()[pri:0, instance:Selenium.BasicElement@3f6db3fb]" started-at="2024-11-30T21:21:21 IST" name="endsetUp" finished-at="2024-11-30T21:21:21 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="endsetUp()[pri:0, instance:Selenium.BasicElement@3f6db3fb]" started-at="2024-11-30T22:19:27 IST" name="endsetUp" finished-at="2024-11-30T22:19:27 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endsetUp -->

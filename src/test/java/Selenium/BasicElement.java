@@ -79,8 +79,8 @@ import org.openqa.selenium.interactions.Actions;
 		wait.until(ExpectedConditions.visibilityOf(radioBtn));
 		
 		driver.findElement(By.xpath("//label[text()='Yes']")).click();
-		WebElement radioButton = driver.findElement(By.xpath("//label[text()='Yes']"));
-		System.out.println("radiobtn: "+radioBtn.isSelected());
+		WebElement radioButton = driver.findElement(By.id("yesRadio"));
+		System.out.println("radiobtn: "+radioButton.isSelected());
 		
 		
 		
