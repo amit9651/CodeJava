@@ -149,7 +149,10 @@ import org.openqa.selenium.interactions.Actions;
 		actions.contextClick(rightClick).perform();
 		String msg2 = driver.findElement(By.id("rightClickMessage")).getText();
 		System.out.println(msg2);
+		WebElement dbl = driver.findElement(By.xpath("//button[text()='Click Me']"));
+		js.executeScript("arguments[0].scrollIntoView(true);", dbl);
 		WebElement click = driver.findElement(By.xpath("//button[text()='Click Me']"));
+		//wait.until(ExpectedConditions.elementToBeClickable(element));
 		click.click();
 		String msg3 = driver.findElement(By.id("dynamicClickMessage")).getText();
 		System.out.println(msg3);
@@ -182,12 +185,24 @@ import org.openqa.selenium.interactions.Actions;
 			
 			int responseCode = connection.getResponseCode();
 			if(responseCode >= 400) {
-				System.out.println("BROKEN URL: "+imgUrl+"-"+responseCode);
+				System.out.println("BROKEN IMAGE: "+imgUrl+"-"+responseCode);
 			}
 			else {
-				System.out.println("VALID URL: "+imgUrl+"-"+responseCode);
+				System.out.println("VALID IMAGE: "+imgUrl+"-"+responseCode);
 			}
 		}
+		
+		/*
+		 * List<WebElement> hrfs = driver.findElements(By.tagName("a")); for(WebElement
+		 * links : hrfs) { String url2 = links.getAttribute("href"); URL link = new
+		 * URL(url2); HttpURLConnection connection = (HttpURLConnection)
+		 * link.openConnection(); connection.connect();
+		 * 
+		 * int code = connection.getResponseCode(); if(code == 200) {
+		 * System.out.println("Valid link: "+links); } else {
+		 * System.out.println("Broken link: "+links); } }
+		 */
+		
 		
 		
 		
