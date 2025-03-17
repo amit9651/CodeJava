@@ -59,6 +59,7 @@ import org.openqa.selenium.interactions.Actions;
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		tools = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[@src='/images/Toolsqa.jpg']")));
 		System.out.println(tools);
+		
 		driver.get("https://demoqa.com/text-box");
 		driver.findElement(By.xpath("//span[text()='Text Box']")).click();
 		WebElement submit = driver.findElement(By.xpath("//button[text()='Submit']"));

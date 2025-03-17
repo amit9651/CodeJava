@@ -2,7 +2,7 @@
 <suite name="MySuite">
     <test name="MyTest">
         <classes>
-            <class name="BasicElement" />
+            <class name="problems.test2" />
         </classes>
     </test>
 </suite>
