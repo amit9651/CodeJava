@@ -35,6 +35,7 @@ public class test2 {
                 System.out.println("Total count of Size "+sizes[i]+": "+products.size());
                 driver.navigate().refresh();
                 driver.get("https://react-shopping-cart-67954.firebaseapp.com/");
+               
             }
             driver.quit();
     }

@@ -3,15 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Selenium.BasicElement">
+      <class name="Selenium.AllTest">
         <methods>
-          <include name="endsetUp"/>
-          <include name="setUp"/>
-          <include name="clickElements"/>
-          <include name="OpenSiteDemoQA"/>
-          <include name="closeBrowser"/>
+          <include name="actionMethods"/>
         </methods>
-      </class> <!-- Selenium.BasicElement -->
+      </class> <!-- Selenium.AllTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
