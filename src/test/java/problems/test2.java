@@ -1,25 +1,30 @@
 package problems;
 
 import dev.failsafe.internal.util.Durations;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-import java.io.File;
+import java.io.*;
+import java.lang.reflect.Array;
+import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.UnknownHostException;
 import java.time.Duration;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class test2 {
-
+    String userDir = System.getProperty("user.dir");
     @Test
     public void test() throws InterruptedException {
         WebDriver driver = new ChromeDriver();
@@ -674,6 +679,7 @@ public class test2 {
         else {
             System.out.println("error in uploading file");
         }
+        driver.quit();
 
     }
 
@@ -687,10 +693,188 @@ public class test2 {
         driver.manage().window().maximize();
         TakesScreenshot ts = (TakesScreenshot) driver;
         File source = ts.getScreenshotAs(OutputType.FILE);
-        File target = new File(System.getProperty("user.dir")+"/screenshots/fullpagess.png");
+        File target = new File(userDir+"/screenshots/fullpagess.png");
         source.renameTo(target);
+        driver.quit();
+    }
 
+    @Test
+    public void chromeOptions(){
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless=new");
+        WebDriver driver = new ChromeDriver(options);
 
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver.get("https://testautomationpractice.blogspot.com/");
+        driver.quit();
+    }
+
+    @Test
+    public void handleSSL(){
+        ChromeOptions options = new ChromeOptions();
+        //options.addArguments("--headless=new");
+        options.setAcceptInsecureCerts(true);
+        options.setExperimentalOption("excludeSwitches",new String[]{"enable-automation"});
+        WebDriver driver = new ChromeDriver(options);
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver.get("https://expired.badssl.com/");
+        System.out.print(driver.getTitle());
+        driver.quit();
+    }
+
+    @Test
+    public void incognitoMode(){
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--incognito");
+        options.setExperimentalOption("excludeSwitches",new String[]{"enable-automation"});
+        options.setAcceptInsecureCerts(true);
+        WebDriver driver = new ChromeDriver(options);
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver.get("https://expired.badssl.com/");
+        System.out.print(driver.getTitle());
+        driver.quit();
+    }
+
+    @Test
+    public void enableExtension(){
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--incognito");
+        options.setExperimentalOption("excludeSwitches",new String[]{"enable-automation"});
+        options.setAcceptInsecureCerts(true);
+        File file = new File(userDir+"/AdBlock.crx");
+        options.addExtensions(file);
+        WebDriver driver = new ChromeDriver(options);
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver.get("https://testautomationpractice.blogspot.com/");
+        System.out.print(driver.getTitle());
+        driver.quit();
+    }
+
+    @Test
+    public void brokenLinks() throws IOException {
+        WebDriver driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver.get("http://www.deadlinkcity.com/");
+        driver.manage().window().maximize();
+        List<WebElement> links = driver.findElements(By.tagName("a"));
+        System.out.println("Total links found on page: "+links.size());
+        int count=0;
+        for(int i=0;i<links.size();i++){
+            String urlText = links.get(i).getAttribute("href");
+            int code=0;
+            if(!urlText.isEmpty()){
+                try {
+                    URL url = new URL(urlText);
+                    HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                    connection.setRequestMethod("GET");
+                    code = connection.getResponseCode();
+                }
+                catch (UnknownHostException e){
+                    System.out.println((i+1)+e.getMessage());
+                }
+                catch (ClassCastException e){
+                    System.out.print((i+1)+e.getMessage());
+                }
+                if(code >=400){
+                    System.out.println((i+1)+".Link is broken: "+urlText+" Status Code: "+code);
+                    count++;
+                }
+                else{
+                    System.out.println((i+1)+".Link is working: "+urlText+" Status Code: "+code);
+                }
+            }
+            else{
+                System.out.println((i+1)+".No link url present for: "+urlText);
+            }
+        }
+        System.out.println("Total broken links: "+count);
+        driver.quit();
+
+    }
+
+    @Test
+    public void shadowDomElement() throws InterruptedException {
+        WebDriver driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver.manage().window().maximize();
+        driver.get("https://dev.automationtesting.in/shadow-dom");
+        //Single shadow dom
+        SearchContext shadow = driver.findElement(By.cssSelector("#shadow-root")).getShadowRoot();
+        String shadowText = shadow.findElement(By.cssSelector("#shadow-element")).getText();
+        Thread.sleep(3000);
+        System.out.println("Shadow DOM Element text: "+shadowText);
+        //Nested Shadown dom
+        SearchContext  nestedShadow = shadow.findElement(By.cssSelector("#inner-shadow-dom")).getShadowRoot();
+        String nestedShadowDom = nestedShadow.findElement(By.cssSelector("#nested-shadow-element")).getText();
+        System.out.println("nestedShadowDom text: "+nestedShadowDom);
+        //multi-nested Shadow dom
+        SearchContext multiNestedShadow = nestedShadow.findElement(By.cssSelector("#nested-shadow-dom")).getShadowRoot();
+        String multiNestedShadowDom = multiNestedShadow.findElement(By.cssSelector("#multi-nested-shadow-element")).getText();
+        System.out.println("multiNestedShadowDom text: "+multiNestedShadowDom);
+        driver.quit();
+    }
+
+    @Test
+    public void svgElement(){
+        WebDriver driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+        driver.manage().window().maximize();
+        driver.findElement(By.xpath("//input[@name='username']")).sendKeys("Admin");
+        driver.findElement(By.xpath("//input[@name='password']")).sendKeys("admin123");
+        driver.findElement(By.xpath("//button[@type='submit']")).click();
+        driver.findElement(By.xpath("//a[@href='/web/index.php/leave/viewLeaveModule']//*[name()='svg']")).click();
+        driver.quit();
+    }
+
+    @Test
+    public void readExcelFile() throws IOException {
+        FileInputStream fileInput = new FileInputStream(userDir+"/testdata/testfile.xlsx");
+        XSSFWorkbook workbook = new XSSFWorkbook(fileInput);
+        XSSFSheet sheet = workbook.getSheet("Car");
+        int totalRows = sheet.getLastRowNum();
+        int totalColoumns = sheet.getRow(1).getLastCellNum();
+        System.out.println("Total rows: "+totalRows);
+        System.out.println("Total coloumns :"+totalColoumns);
+
+        for(int r=0;r<=totalRows;r++){
+            XSSFRow rowData = sheet.getRow(r);
+            for(int c=0;c<totalColoumns;c++){
+                XSSFCell cellData = rowData.getCell(c);
+                System.out.print(cellData.toString()+" ");
+            }
+            System.out.println("");
+        }
+        workbook.close();
+        fileInput.close();
+    }
+
+    @Test
+    public void writeExcelFile() throws IOException {
+        FileOutputStream fileOutput = new FileOutputStream(userDir+"/testdata/writetestfile.xlsx");
+        XSSFWorkbook workbook = new XSSFWorkbook();
+        XSSFSheet sheet = workbook.createSheet("Data");
+        XSSFRow row1 = sheet.createRow(0);
+            row1.createCell(0).setCellValue("Java");
+            row1.createCell(1).setCellValue("23");
+            row1.createCell(2).setCellValue("Automation");
+        XSSFRow row2 = sheet.createRow(1);
+            row2.createCell(0).setCellValue("C++");
+            row2.createCell(1).setCellValue("12");
+            row2.createCell(2).setCellValue("Automation");
+        XSSFRow row3 = sheet.createRow(2);
+            row3.createCell(0).setCellValue("Python");
+            row3.createCell(1).setCellValue("3");
+            row3.createCell(2).setCellValue("Automation");
+        workbook.write(fileOutput);
+        workbook.close();
+        fileOutput.close();
+        System.out.println("File is created successfully !");
+        List<Integer> list = Arrays.asList(1,2,3,4);
+        System.out.println(list);
 
     }
 
