@@ -878,4 +878,14 @@ public class test2 {
 
     }
 
+    @Test
+    public void displayConfigfile(){
+        ReadConfigFile readConfigFile = new ReadConfigFile();
+        System.out.println(readConfigFile.getUrl("appURL"));
+        System.out.println(readConfigFile.email("email"));
+        System.out.println(readConfigFile.password("password"));
+        System.out.println(readConfigFile.productName("searchProductName"));
+
+    }
+
 }
