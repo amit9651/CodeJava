@@ -12,6 +12,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.io.*;
@@ -23,9 +24,11 @@ import java.net.UnknownHostException;
 import java.time.Duration;
 import java.util.*;
 
+@Listeners(listeners.TestListeners.class)
 public class test2 {
     String userDir = System.getProperty("user.dir");
-    @Test
+
+    @Test(description = "Verify all tshirts size count")
     public void test() throws InterruptedException {
         WebDriver driver = new ChromeDriver();
 
@@ -51,7 +54,7 @@ public class test2 {
 
 
 
-    @Test
+    @Test(description = "Verify all get methods")
     public void getMethods() {
 
         WebDriver driver = new ChromeDriver();
@@ -87,7 +90,7 @@ public class test2 {
 
     }
 
-    @Test
+    @Test(description = "Verify all conditional methods")
     public void conditionalMethods() {
 
         WebDriver driver = new ChromeDriver();
@@ -110,7 +113,7 @@ public class test2 {
     }
 
 
-    @Test
+    @Test(description = "Verify all navigation commands")
     public void navigationCommands() throws MalformedURLException {
         WebDriver driver = new ChromeDriver();
 
@@ -125,7 +128,7 @@ public class test2 {
 
     }
 
-    @Test
+    @Test(description = "Verify wikipedia page assignment")
     public void assignment01() {
         WebDriver driver = new ChromeDriver();
 
@@ -160,7 +163,7 @@ public class test2 {
 
     }
 
-    @Test
+    @Test(description = "Verify all types of alerts")
     public void alerts() {
         WebDriver driver = new ChromeDriver();
 
@@ -194,7 +197,7 @@ public class test2 {
         driver.quit();
     }
 
-    @Test
+    @Test(description = "Verify alert handling with explicit alerts")
     public void handleAlertWithExplicitWait() {
         WebDriver driver = new ChromeDriver();
 
@@ -208,7 +211,7 @@ public class test2 {
         driver.quit();
     }
 
-    @Test
+    @Test(description = "Verify authentication type popup")
     public void authenticationPopup() {
         WebDriver driver = new ChromeDriver();
 
@@ -218,7 +221,7 @@ public class test2 {
     }
 
 
-    @Test
+    @Test(description = "Verify mmt small window close")
     public void makeMyTrip() {
         WebDriver driver = new ChromeDriver();
 
@@ -234,7 +237,7 @@ public class test2 {
 
     }
 
-    @Test
+    @Test(description = "Verify table counts")
     public void assignmenttwo() {
         WebDriver driver = new ChromeDriver();
 

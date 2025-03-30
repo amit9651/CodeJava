@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-23T16:56:02 IST" name="Default suite" finished-at="2025-03-23T16:56:21 IST" duration-ms="18934">
+  <suite started-at="2025-03-30T11:27:24 IST" name="Default Suite" finished-at="2025-03-30T11:27:24 IST" duration-ms="25">
     <groups>
     </groups>
-    <test started-at="2025-03-23T16:56:02 IST" name="Default test" finished-at="2025-03-23T16:56:21 IST" duration-ms="18934">
-      <class name="Selenium.AllTest">
-        <test-method signature="draganddrop()[pri:0, instance:Selenium.AllTest@640f11a1]" started-at="2025-03-23T16:56:02 IST" name="draganddrop" finished-at="2025-03-23T16:56:21 IST" duration-ms="18890" status="PASS">
+    <test started-at="2025-03-30T11:27:24 IST" name="CodeJava" finished-at="2025-03-30T11:27:24 IST" duration-ms="25">
+      <class name="problems.test2">
+        <test-method signature="displayConfigfile()[pri:0, instance:problems.test2@1d2adfbe]" started-at="2025-03-30T11:27:24 IST" name="displayConfigfile" finished-at="2025-03-30T11:27:24 IST" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- draganddrop -->
-      </class> <!-- Selenium.AllTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- displayConfigfile -->
+      </class> <!-- problems.test2 -->
+    </test> <!-- CodeJava -->
+  </suite> <!-- Default Suite -->
 </testng-results>
