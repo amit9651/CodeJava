@@ -27,6 +27,11 @@ jobs:
         java-version: '23'
         distribution: 'temurin'
         cache: maven
+
+    - name: Install Chrome
+      run: |
+            sudo apt-get update
+            sudo apt-get install -y google-chrome-stable
         
     - name: Execute Tests
       run: mvn clean test -Dsuite=suite -X
