@@ -5,3 +5,127 @@
 2025-03-30 11:27:24 INFO  TestListeners:41 - Test Suite execution finished....
 2025-03-30 11:28:42 INFO  TestListeners:36 - Test Suite execution started....
 2025-03-30 11:28:42 INFO  TestListeners:15 - Test Case execution started actionMethods
+2025-03-30 12:36:32 INFO  TestListeners:36 - Test Suite execution started....
+2025-03-30 12:36:42 INFO  TestListeners:15 - Test Case execution started actionMethods
+2025-03-30 12:36:42 ERROR TestListeners:26 - Test Case Failed actionMethods
+2025-03-30 12:36:42 INFO  TestListeners:27 - Description 
+2025-03-30 12:36:42 INFO  TestListeners:15 - Test Case execution started alerts
+2025-03-30 12:36:42 INFO  TestListeners:31 - Test Case Skipped alerts
+2025-03-30 12:36:42 INFO  TestListeners:32 - Description Verify all types of alerts
+2025-03-30 12:36:42 INFO  TestListeners:15 - Test Case execution started assignment01
+2025-03-30 12:36:42 INFO  TestListeners:31 - Test Case Skipped assignment01
+2025-03-30 12:36:42 INFO  TestListeners:32 - Description Verify wikipedia page assignment
+2025-03-30 12:36:42 INFO  TestListeners:15 - Test Case execution started assignment3
+2025-03-30 12:36:42 INFO  TestListeners:31 - Test Case Skipped assignment3
+2025-03-30 12:36:42 INFO  TestListeners:32 - Description 
+2025-03-30 12:36:42 INFO  TestListeners:15 - Test Case execution started assignmenttwo
+2025-03-30 12:36:42 INFO  TestListeners:31 - Test Case Skipped assignmenttwo
+2025-03-30 12:36:42 INFO  TestListeners:32 - Description Verify table counts
+2025-03-30 12:36:42 INFO  TestListeners:15 - Test Case execution started authenticationPopup
+2025-03-30 12:36:42 INFO  TestListeners:31 - Test Case Skipped authenticationPopup
+2025-03-30 12:36:42 INFO  TestListeners:32 - Description Verify authentication type popup
+2025-03-30 12:36:42 INFO  TestListeners:15 - Test Case execution started brokenLinks
+2025-03-30 12:36:42 INFO  TestListeners:31 - Test Case Skipped brokenLinks
+2025-03-30 12:36:42 INFO  TestListeners:32 - Description 
+2025-03-30 12:36:42 INFO  TestListeners:15 - Test Case execution started captureAllDropdownValue
+2025-03-30 12:36:42 INFO  TestListeners:31 - Test Case Skipped captureAllDropdownValue
+2025-03-30 12:36:42 INFO  TestListeners:32 - Description 
+2025-03-30 12:36:42 INFO  TestListeners:15 - Test Case execution started chromeOptions
+2025-03-30 12:36:42 INFO  TestListeners:31 - Test Case Skipped chromeOptions
+2025-03-30 12:36:42 INFO  TestListeners:32 - Description 
+2025-03-30 12:36:42 INFO  TestListeners:15 - Test Case execution started clickInAutoSuggestDD
+2025-03-30 12:36:42 INFO  TestListeners:31 - Test Case Skipped clickInAutoSuggestDD
+2025-03-30 12:36:42 INFO  TestListeners:32 - Description 
+2025-03-30 12:36:42 INFO  TestListeners:15 - Test Case execution started conditionalMethods
+2025-03-30 12:36:42 INFO  TestListeners:31 - Test Case Skipped conditionalMethods
+2025-03-30 12:36:42 INFO  TestListeners:32 - Description Verify all conditional methods
+2025-03-30 12:36:42 INFO  TestListeners:15 - Test Case execution started datePicker
+2025-03-30 12:36:42 INFO  TestListeners:31 - Test Case Skipped datePicker
+2025-03-30 12:36:42 INFO  TestListeners:32 - Description 
+2025-03-30 12:36:42 INFO  TestListeners:15 - Test Case execution started displayConfigfile
+2025-03-30 12:36:42 INFO  TestListeners:31 - Test Case Skipped displayConfigfile
+2025-03-30 12:36:42 INFO  TestListeners:32 - Description 
+2025-03-30 12:36:42 INFO  TestListeners:15 - Test Case execution started draganddrop
+2025-03-30 12:36:42 INFO  TestListeners:31 - Test Case Skipped draganddrop
+2025-03-30 12:36:42 INFO  TestListeners:32 - Description 
+2025-03-30 12:36:42 INFO  TestListeners:15 - Test Case execution started dropdowns
+2025-03-30 12:36:42 INFO  TestListeners:31 - Test Case Skipped dropdowns
+2025-03-30 12:36:42 INFO  TestListeners:32 - Description 
+2025-03-30 12:36:42 INFO  TestListeners:15 - Test Case execution started dynamicDropdown
+2025-03-30 12:36:42 INFO  TestListeners:31 - Test Case Skipped dynamicDropdown
+2025-03-30 12:36:42 INFO  TestListeners:32 - Description 
+2025-03-30 12:36:42 INFO  TestListeners:15 - Test Case execution started enableExtension
+2025-03-30 12:36:42 INFO  TestListeners:31 - Test Case Skipped enableExtension
+2025-03-30 12:36:42 INFO  TestListeners:32 - Description 
+2025-03-30 12:36:42 INFO  TestListeners:15 - Test Case execution started frame
+2025-03-30 12:36:42 INFO  TestListeners:31 - Test Case Skipped frame
+2025-03-30 12:36:42 INFO  TestListeners:32 - Description 
+2025-03-30 12:36:42 INFO  TestListeners:15 - Test Case execution started getMethods
+2025-03-30 12:36:42 INFO  TestListeners:31 - Test Case Skipped getMethods
+2025-03-30 12:36:42 INFO  TestListeners:32 - Description Verify all get methods
+2025-03-30 12:36:42 INFO  TestListeners:15 - Test Case execution started getTextInPage
+2025-03-30 12:36:42 INFO  TestListeners:31 - Test Case Skipped getTextInPage
+2025-03-30 12:36:42 INFO  TestListeners:32 - Description 
+2025-03-30 12:36:42 INFO  TestListeners:15 - Test Case execution started handleAlertWithExplicitWait
+2025-03-30 12:36:42 INFO  TestListeners:31 - Test Case Skipped handleAlertWithExplicitWait
+2025-03-30 12:36:42 INFO  TestListeners:32 - Description Verify alert handling with explicit alerts
+2025-03-30 12:36:42 INFO  TestListeners:15 - Test Case execution started handleSSL
+2025-03-30 12:36:42 INFO  TestListeners:31 - Test Case Skipped handleSSL
+2025-03-30 12:36:42 INFO  TestListeners:32 - Description 
+2025-03-30 12:36:42 INFO  TestListeners:15 - Test Case execution started incognitoMode
+2025-03-30 12:36:42 INFO  TestListeners:31 - Test Case Skipped incognitoMode
+2025-03-30 12:36:42 INFO  TestListeners:32 - Description 
+2025-03-30 12:36:42 INFO  TestListeners:15 - Test Case execution started javascriptexecutor
+2025-03-30 12:36:42 INFO  TestListeners:31 - Test Case Skipped javascriptexecutor
+2025-03-30 12:36:42 INFO  TestListeners:32 - Description 
+2025-03-30 12:36:42 INFO  TestListeners:15 - Test Case execution started javascriptexecutorScrolling
+2025-03-30 12:36:42 INFO  TestListeners:31 - Test Case Skipped javascriptexecutorScrolling
+2025-03-30 12:36:42 INFO  TestListeners:32 - Description 
+2025-03-30 12:36:42 INFO  TestListeners:15 - Test Case execution started keyboardactions
+2025-03-30 12:36:42 INFO  TestListeners:31 - Test Case Skipped keyboardactions
+2025-03-30 12:36:42 INFO  TestListeners:32 - Description 
+2025-03-30 12:36:42 INFO  TestListeners:15 - Test Case execution started makeMyTrip
+2025-03-30 12:36:42 INFO  TestListeners:31 - Test Case Skipped makeMyTrip
+2025-03-30 12:36:42 INFO  TestListeners:32 - Description Verify mmt small window close
+2025-03-30 12:36:42 INFO  TestListeners:15 - Test Case execution started navigationCommands
+2025-03-30 12:36:42 INFO  TestListeners:31 - Test Case Skipped navigationCommands
+2025-03-30 12:36:42 INFO  TestListeners:32 - Description Verify all navigation commands
+2025-03-30 12:36:42 INFO  TestListeners:15 - Test Case execution started nykaa
+2025-03-30 12:36:42 INFO  TestListeners:31 - Test Case Skipped nykaa
+2025-03-30 12:36:42 INFO  TestListeners:32 - Description 
+2025-03-30 12:36:42 INFO  TestListeners:15 - Test Case execution started readExcelFile
+2025-03-30 12:36:42 INFO  TestListeners:31 - Test Case Skipped readExcelFile
+2025-03-30 12:36:42 INFO  TestListeners:32 - Description 
+2025-03-30 12:36:42 INFO  TestListeners:15 - Test Case execution started shadowDomElement
+2025-03-30 12:36:42 INFO  TestListeners:31 - Test Case Skipped shadowDomElement
+2025-03-30 12:36:42 INFO  TestListeners:32 - Description 
+2025-03-30 12:36:42 INFO  TestListeners:15 - Test Case execution started slider
+2025-03-30 12:36:42 INFO  TestListeners:31 - Test Case Skipped slider
+2025-03-30 12:36:42 INFO  TestListeners:32 - Description 
+2025-03-30 12:36:42 INFO  TestListeners:15 - Test Case execution started staticWebTable
+2025-03-30 12:36:42 INFO  TestListeners:31 - Test Case Skipped staticWebTable
+2025-03-30 12:36:42 INFO  TestListeners:32 - Description 
+2025-03-30 12:36:42 INFO  TestListeners:15 - Test Case execution started svgElement
+2025-03-30 12:36:42 INFO  TestListeners:31 - Test Case Skipped svgElement
+2025-03-30 12:36:42 INFO  TestListeners:32 - Description 
+2025-03-30 12:36:42 INFO  TestListeners:15 - Test Case execution started takeScrennshort
+2025-03-30 12:36:42 INFO  TestListeners:31 - Test Case Skipped takeScrennshort
+2025-03-30 12:36:42 INFO  TestListeners:32 - Description 
+2025-03-30 12:36:42 INFO  TestListeners:15 - Test Case execution started test
+2025-03-30 12:36:42 INFO  TestListeners:31 - Test Case Skipped test
+2025-03-30 12:36:42 INFO  TestListeners:32 - Description Verify all tshirts size count
+2025-03-30 12:36:42 INFO  TestListeners:15 - Test Case execution started uploadfile
+2025-03-30 12:36:42 INFO  TestListeners:31 - Test Case Skipped uploadfile
+2025-03-30 12:36:42 INFO  TestListeners:32 - Description 
+2025-03-30 12:36:42 INFO  TestListeners:15 - Test Case execution started writeExcelFile
+2025-03-30 12:36:42 INFO  TestListeners:31 - Test Case Skipped writeExcelFile
+2025-03-30 12:36:42 INFO  TestListeners:32 - Description 
+2025-03-30 12:36:42 INFO  TestListeners:41 - Test Suite execution finished....
+2025-03-30 12:38:34 INFO  TestListeners:36 - Test Suite execution started....
+2025-03-30 12:38:35 INFO  TestListeners:15 - Test Case execution started actionMethods
+2025-03-30 12:38:50 INFO  TestListeners:20 - Test Case Passed actionMethods
+2025-03-30 12:38:50 INFO  TestListeners:21 - Description 
+2025-03-30 12:38:51 INFO  TestListeners:15 - Test Case execution started alerts
+2025-03-30 12:39:01 INFO  TestListeners:20 - Test Case Passed alerts
+2025-03-30 12:39:01 INFO  TestListeners:21 - Description Verify all types of alerts
+2025-03-30 12:39:01 INFO  TestListeners:15 - Test Case execution started assignment01

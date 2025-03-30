@@ -12,6 +12,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -27,10 +29,15 @@ import java.util.*;
 @Listeners(listeners.TestListeners.class)
 public class test2 {
     String userDir = System.getProperty("user.dir");
+    WebDriver driver;
 
+    @BeforeMethod
+    public void setUp(){
+        driver = new ChromeDriver();
+    }
     @Test(description = "Verify all tshirts size count")
     public void test() throws InterruptedException {
-        WebDriver driver = new ChromeDriver();
+
 
         String[] sizes = {"S","M","L","XS","ML","XL","XXL"};
             driver.get("https://react-shopping-cart-67954.firebaseapp.com/");
@@ -57,7 +64,7 @@ public class test2 {
     @Test(description = "Verify all get methods")
     public void getMethods() {
 
-        WebDriver driver = new ChromeDriver();
+
 
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
         driver.manage().window().maximize();
@@ -93,7 +100,7 @@ public class test2 {
     @Test(description = "Verify all conditional methods")
     public void conditionalMethods() {
 
-        WebDriver driver = new ChromeDriver();
+
 
         driver.get("https://demo.nopcommerce.com/register");
         driver.manage().window().maximize();
@@ -115,7 +122,7 @@ public class test2 {
 
     @Test(description = "Verify all navigation commands")
     public void navigationCommands() throws MalformedURLException {
-        WebDriver driver = new ChromeDriver();
+
 
         driver.get("https://demo.nopcommerce.com/register");
         driver.findElement(By.xpath("//a[text()='Electronics ']")).click();
@@ -130,7 +137,7 @@ public class test2 {
 
     @Test(description = "Verify wikipedia page assignment")
     public void assignment01() {
-        WebDriver driver = new ChromeDriver();
+
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://testautomationpractice.blogspot.com/");
@@ -165,7 +172,7 @@ public class test2 {
 
     @Test(description = "Verify all types of alerts")
     public void alerts() {
-        WebDriver driver = new ChromeDriver();
+
 
         driver.get("https://the-internet.herokuapp.com/javascript_alerts");
         driver.manage().window().maximize();
@@ -199,7 +206,7 @@ public class test2 {
 
     @Test(description = "Verify alert handling with explicit alerts")
     public void handleAlertWithExplicitWait() {
-        WebDriver driver = new ChromeDriver();
+
 
         driver.get("https://the-internet.herokuapp.com/javascript_alerts");
         driver.manage().window().maximize();
@@ -213,7 +220,7 @@ public class test2 {
 
     @Test(description = "Verify authentication type popup")
     public void authenticationPopup() {
-        WebDriver driver = new ChromeDriver();
+
 
         driver.get("https://admin:admin@the-internet.herokuapp.com/digest_auth");
         System.out.println("Auth message: "+driver.findElement(By.xpath("//div[@class='example']/child::p")).getText());
@@ -223,7 +230,7 @@ public class test2 {
 
     @Test(description = "Verify mmt small window close")
     public void makeMyTrip() {
-        WebDriver driver = new ChromeDriver();
+
 
         driver.get("https://www.makemytrip.com/");
         driver.manage().window().maximize();
@@ -239,7 +246,7 @@ public class test2 {
 
     @Test(description = "Verify table counts")
     public void assignmenttwo() {
-        WebDriver driver = new ChromeDriver();
+
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://testautomationpractice.blogspot.com/");
@@ -268,7 +275,7 @@ public class test2 {
 
     @Test
     public void frame() {
-        WebDriver driver = new ChromeDriver();
+
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://ui.vision/demo/webtest/frames/");
@@ -299,7 +306,7 @@ public class test2 {
 
     @Test
     public void dropdowns() {
-        WebDriver driver = new ChromeDriver();
+
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://testautomationpractice.blogspot.com/");
@@ -326,7 +333,7 @@ public class test2 {
 
     @Test
     public void captureAllDropdownValue() {
-        WebDriver driver = new ChromeDriver();
+
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://www.jquery-az.com/boots/demo.php?ex=63.0_2");
@@ -347,7 +354,7 @@ public class test2 {
 
     @Test
     public void dynamicDropdown() {
-        WebDriver driver = new ChromeDriver();
+
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
@@ -367,7 +374,7 @@ public class test2 {
 
     @Test
     public void getTextInPage() {
-        WebDriver driver = new ChromeDriver();
+
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://testautomationpractice.blogspot.com/");
@@ -380,7 +387,7 @@ public class test2 {
 
     @Test
     public void clickInAutoSuggestDD() {
-        WebDriver driver = new ChromeDriver();
+
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://www.flipkart.com/");
@@ -407,7 +414,7 @@ public class test2 {
 
     @Test
     public void staticWebTable() {
-        WebDriver driver = new ChromeDriver();
+
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://testautomationpractice.blogspot.com/");
@@ -440,7 +447,7 @@ public class test2 {
 
     @Test
     public void assignment3() throws InterruptedException {
-        WebDriver driver = new ChromeDriver();
+
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://blazedemo.com/");
@@ -495,7 +502,7 @@ public class test2 {
 
     @Test
     public void datePicker() throws InterruptedException {
-        WebDriver driver = new ChromeDriver();
+
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://testautomationpractice.blogspot.com/");
@@ -522,7 +529,7 @@ public class test2 {
 
     @Test
     public void actionMethods() {
-        WebDriver driver = new ChromeDriver();
+
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://www.browserstack.com/");
@@ -546,7 +553,7 @@ public class test2 {
 
     @Test
     public void draganddrop() {
-        WebDriver driver = new ChromeDriver();
+
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html");
@@ -565,7 +572,7 @@ public class test2 {
 
     @Test
     public void slider() throws InterruptedException {
-        WebDriver driver = new ChromeDriver();
+
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://www.jqueryscript.net/demo/Price-Range-Slider-jQuery-UI/");
@@ -590,7 +597,7 @@ public class test2 {
 
     @Test
     public void keyboardactions() {
-        WebDriver driver = new ChromeDriver();
+
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://text-compare.com/");
@@ -615,7 +622,7 @@ public class test2 {
 
     @Test
     public void nykaa() {
-        WebDriver driver = new ChromeDriver();
+
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://www.nykaa.com/");
@@ -631,7 +638,7 @@ public class test2 {
 
     @Test
     public void javascriptexecutor() {
-        WebDriver driver = new ChromeDriver();
+
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://testautomationpractice.blogspot.com/");
@@ -647,7 +654,7 @@ public class test2 {
 
     @Test
     public void javascriptexecutorScrolling() {
-        WebDriver driver = new ChromeDriver();
+
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://testautomationpractice.blogspot.com/");
@@ -668,7 +675,7 @@ public class test2 {
 
     @Test
     public void uploadfile() {
-        WebDriver driver = new ChromeDriver();
+
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://davidwalsh.name/demo/multiple-file-upload.php");
@@ -689,7 +696,7 @@ public class test2 {
 
     @Test
     public void takeScrennshort() {
-        WebDriver driver = new ChromeDriver();
+
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://testautomationpractice.blogspot.com/");
@@ -758,7 +765,7 @@ public class test2 {
 
     @Test
     public void brokenLinks() throws IOException {
-        WebDriver driver = new ChromeDriver();
+
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("http://www.deadlinkcity.com/");
         driver.manage().window().maximize();
@@ -800,7 +807,7 @@ public class test2 {
 
     @Test
     public void shadowDomElement() throws InterruptedException {
-        WebDriver driver = new ChromeDriver();
+
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.manage().window().maximize();
         driver.get("https://dev.automationtesting.in/shadow-dom");
@@ -822,7 +829,7 @@ public class test2 {
 
     @Test
     public void svgElement(){
-        WebDriver driver = new ChromeDriver();
+
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
         driver.manage().window().maximize();
@@ -889,6 +896,10 @@ public class test2 {
         System.out.println(readConfigFile.password("password"));
         System.out.println(readConfigFile.productName("searchProductName"));
 
+    }
+    @AfterMethod
+    public void tearDown(){
+        driver.quit();
     }
 
 }
