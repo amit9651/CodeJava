@@ -45,3 +45,17 @@ jobs:
         name: TestNG Results
         path: target/surefire-reports/junitreports/TEST-*.xml
         reporter: java-junit
+
+    - name: Send Email Notification
+      if: always()
+      uses: dawidd6/action-send-mail@v3
+      with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: Test Execution Report - ${{ github.repository }}
+          body: "Please find the attached test execution reports for WEB UI suite."
+          to: amitcbsigh17@gmail.com
+          from: no-reply@github.com
+          attachments: target/extent-reports/report.html,target/cucumber-reports/report.html
