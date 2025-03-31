@@ -29,7 +29,7 @@ import java.util.*;
 @Listeners(listeners.TestListeners.class)
 public class test2 {
     String userDir = System.getProperty("user.dir");
-     driver;
+     WebDriver driver;
 
     @BeforeMethod
     public void setUp(){
