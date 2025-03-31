@@ -29,11 +29,15 @@ import java.util.*;
 @Listeners(listeners.TestListeners.class)
 public class test2 {
     String userDir = System.getProperty("user.dir");
-    WebDriver driver;
+     driver;
 
     @BeforeMethod
     public void setUp(){
-        driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless=new");
+        options.addArguments("--disable-gpu");
+        options.addArguments("--no-sandbox");
+        driver = new ChromeDriver(options);
     }
     @Test(description = "Verify all tshirts size count")
     public void test() throws InterruptedException {

@@ -129,3 +129,38 @@
 2025-03-30 12:39:01 INFO  TestListeners:20 - Test Case Passed alerts
 2025-03-30 12:39:01 INFO  TestListeners:21 - Description Verify all types of alerts
 2025-03-30 12:39:01 INFO  TestListeners:15 - Test Case execution started assignment01
+2025-03-31 07:45:17 INFO  TestListeners:36 - Test Suite execution started....
+2025-03-31 07:45:20 INFO  TestListeners:15 - Test Case execution started actionMethods
+2025-03-31 07:45:27 INFO  TestListeners:20 - Test Case Passed actionMethods
+2025-03-31 07:45:27 INFO  TestListeners:21 - Description 
+2025-03-31 07:45:28 INFO  TestListeners:15 - Test Case execution started alerts
+2025-03-31 07:45:33 INFO  TestListeners:20 - Test Case Passed alerts
+2025-03-31 07:45:33 INFO  TestListeners:21 - Description Verify all types of alerts
+2025-03-31 07:45:34 INFO  TestListeners:15 - Test Case execution started assignment01
+2025-03-31 07:45:45 INFO  TestListeners:20 - Test Case Passed assignment01
+2025-03-31 07:45:45 INFO  TestListeners:21 - Description Verify wikipedia page assignment
+2025-03-31 07:45:46 INFO  TestListeners:15 - Test Case execution started assignment3
+2025-03-31 07:45:54 INFO  TestListeners:20 - Test Case Passed assignment3
+2025-03-31 07:45:54 INFO  TestListeners:21 - Description 
+2025-03-31 07:45:55 INFO  TestListeners:15 - Test Case execution started assignmenttwo
+2025-03-31 07:46:00 INFO  TestListeners:20 - Test Case Passed assignmenttwo
+2025-03-31 07:46:00 INFO  TestListeners:21 - Description Verify table counts
+2025-03-31 07:46:00 INFO  TestListeners:15 - Test Case execution started authenticationPopup
+2025-03-31 07:46:05 INFO  TestListeners:20 - Test Case Passed authenticationPopup
+2025-03-31 07:46:05 INFO  TestListeners:21 - Description Verify authentication type popup
+2025-03-31 07:46:06 INFO  TestListeners:15 - Test Case execution started brokenLinks
+2025-03-31 07:46:50 INFO  TestListeners:20 - Test Case Passed brokenLinks
+2025-03-31 07:46:50 INFO  TestListeners:21 - Description 
+2025-03-31 07:46:50 INFO  TestListeners:15 - Test Case execution started captureAllDropdownValue
+2025-03-31 07:46:55 INFO  TestListeners:20 - Test Case Passed captureAllDropdownValue
+2025-03-31 07:46:55 INFO  TestListeners:21 - Description 
+2025-03-31 07:46:56 INFO  TestListeners:15 - Test Case execution started chromeOptions
+2025-03-31 07:47:01 INFO  TestListeners:20 - Test Case Passed chromeOptions
+2025-03-31 07:47:01 INFO  TestListeners:21 - Description 
+2025-03-31 07:47:02 INFO  TestListeners:15 - Test Case execution started clickInAutoSuggestDD
+2025-03-31 07:47:07 INFO  TestListeners:20 - Test Case Passed clickInAutoSuggestDD
+2025-03-31 07:47:07 INFO  TestListeners:21 - Description 
+2025-03-31 07:47:08 INFO  TestListeners:15 - Test Case execution started conditionalMethods
+2025-03-31 07:47:09 ERROR TestListeners:26 - Test Case Failed conditionalMethods
+2025-03-31 07:47:09 INFO  TestListeners:27 - Description Verify all conditional methods
+2025-03-31 07:47:10 INFO  TestListeners:15 - Test Case execution started datePicker
