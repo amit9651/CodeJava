@@ -56,7 +56,7 @@ public class test2 {
                 driver.get("https://react-shopping-cart-67954.firebaseapp.com/");
                
             }
-            driver.quit();
+
     }
 
 
@@ -92,7 +92,7 @@ public class test2 {
         System.out.println(driver.getTitle());
         System.out.println(driver.getWindowHandle());
 
-        driver.quit();
+        
 
 
     }
@@ -116,7 +116,7 @@ public class test2 {
             System.out.println("Female checkbox is now selected :"+driver.findElement(By.id("gender-female")).isSelected());
             System.out.println("Male checkbox is now selected :"+driver.findElement(By.id("gender-male")).isSelected());
         }
-        driver.quit();
+        
     }
 
 
@@ -130,7 +130,7 @@ public class test2 {
         driver.navigate().refresh();
         URL url = new URL("https://demo.nopcommerce.com/login");
         driver.navigate().to(url);
-        driver.quit();
+        
 
 
     }
@@ -165,7 +165,7 @@ public class test2 {
         }
         driver.switchTo().window(parent);
         System.out.println("driver returned to parent window :"+driver.getTitle());
-        driver.quit();
+        
 
 
     }
@@ -201,7 +201,7 @@ public class test2 {
 
 
 
-        driver.quit();
+        
     }
 
     @Test(description = "Verify alert handling with explicit alerts")
@@ -215,7 +215,7 @@ public class test2 {
         Alert alert = wait.until(ExpectedConditions.alertIsPresent());
         alert.accept();
         System.out.println("Result: "+driver.findElement(By.xpath("//p[@id='result']")).getText());
-        driver.quit();
+        
     }
 
     @Test(description = "Verify authentication type popup")
@@ -224,7 +224,7 @@ public class test2 {
 
         driver.get("https://admin:admin@the-internet.herokuapp.com/digest_auth");
         System.out.println("Auth message: "+driver.findElement(By.xpath("//div[@class='example']/child::p")).getText());
-        driver.quit();
+        
     }
 
 
@@ -239,7 +239,7 @@ public class test2 {
         driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys("8575435");
         driver.findElement(By.xpath("//span[@data-cy='closeModal']")).click();
 
-        driver.quit();
+        
 
 
     }
@@ -268,7 +268,7 @@ public class test2 {
                 driver.findElement(By.xpath(xpathbox)).click();
             }
         }
-        driver.quit();
+        
 
     }
 
@@ -300,7 +300,7 @@ public class test2 {
         js.executeScript("arguments[0].scrollIntoView(true);", text);
         text.click();
 
-        driver.quit();
+        
 
     }
 
@@ -326,7 +326,7 @@ public class test2 {
         driver.findElement(By.xpath("//li//input[@value='Java']")).click();
         driver.findElement(By.xpath("//li//input[@value='csharp']")).click();
         driver.findElement(By.xpath("//button[contains(@class,'multiselect')]")).click();
-        driver.quit();
+        
 
 
     }
@@ -347,7 +347,7 @@ public class test2 {
             }
         }
         driver.findElement(By.xpath("//button[contains(@class,'multiselect')]")).click();
-        driver.quit();
+        
 
     }
 
@@ -365,7 +365,7 @@ public class test2 {
         driver.findElement(By.xpath("//span[text()='PIM']")).click();
         driver.findElement(By.xpath("//label[text()='Job Title']/parent::div/parent::div//div[2]//div/div/div[1]")).click();
         driver.findElement(By.xpath("//span[normalize-space()='Software Engineer']")).click();
-        driver.quit();
+        
 
 
 
@@ -380,7 +380,7 @@ public class test2 {
         driver.get("https://testautomationpractice.blogspot.com/");
         driver.manage().window().maximize();
         System.out.println(driver.findElement(By.xpath("//div[@class='main-outer']")).getText());
-        driver.quit();
+        
 
     }
 
@@ -406,7 +406,7 @@ public class test2 {
         }
 
         System.out.println(driver.findElement(By.xpath("//div[@class='col col-7-12']//div[@class='KzDlHZ'][1]")).getText());
-        driver.quit();
+        
 
 
     }
@@ -440,7 +440,7 @@ public class test2 {
             System.out.println("");
 
         }
-        driver.quit();
+        
 
 
     }
@@ -494,7 +494,7 @@ public class test2 {
         pbtn.click();
         System.out.println("Purchase status: "+driver.findElement(By.xpath("//h1")).getText());
         System.out.println("Order ID: "+driver.findElement(By.xpath("//table//tr[1]/td[2]")).getText());
-        driver.quit();
+        
 
 
     }
@@ -520,7 +520,7 @@ public class test2 {
 
         }
         driver.findElement(By.xpath("(//td[@data-handler='selectDay'])["+day+"]")).click();
-        driver.quit();
+        
 
 
 
@@ -547,7 +547,7 @@ public class test2 {
         driver.navigate().to("https://qa-practice.netlify.app/double-click");
         WebElement doubleclick = driver.findElement(By.id("double-click-btn"));
         action.doubleClick(doubleclick).perform();
-        driver.quit();
+        
     }
 
 
@@ -565,7 +565,7 @@ public class test2 {
         //action.clickAndHold(source).moveToElement(target).release().build().perform();
         //OR
         action.dragAndDrop(source, target).perform();
-        driver.quit();
+        
     }
 
 
@@ -591,7 +591,7 @@ public class test2 {
         Thread.sleep(3000);
         action.clickAndHold(leftslider2).moveByOffset(143, 259).perform();
         action.clickAndHold(rightslider2).moveByOffset(-156, 259).perform();
-        driver.quit();
+        
 
     }
 
@@ -615,7 +615,7 @@ public class test2 {
         driver.get("https://www.nykaa.com/");
         WebElement search = driver.findElement(By.xpath("//input[@placeholder='Search on Nykaa']"));
         search.sendKeys("Tshirts");
-        driver.quit();
+        
 
 
     }
@@ -630,7 +630,7 @@ public class test2 {
         //NYKAA
         WebElement search = driver.findElement(By.xpath("//input[@placeholder='Search on Nykaa']"));
         search.sendKeys("Tshirts",Keys.ENTER);
-        driver.quit();
+        
 
 
     }
@@ -648,7 +648,7 @@ public class test2 {
         js.executeScript("arguments[0].setAttribute('value','Amit')", name);
         WebElement gender = driver.findElement(By.id("male"));
         js.executeScript("arguments[0].click()", gender);
-        driver.quit();
+        
 
     }
 
@@ -669,7 +669,7 @@ public class test2 {
         System.out.println(js.executeScript("return window.pageYOffset;"));
         js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
         System.out.println(js.executeScript("return window.pageYOffset;"));
-        driver.quit();
+        
 
     }
 
@@ -689,7 +689,7 @@ public class test2 {
         else {
             System.out.println("error in uploading file");
         }
-        driver.quit();
+        
 
     }
 
@@ -705,7 +705,7 @@ public class test2 {
         File source = ts.getScreenshotAs(OutputType.FILE);
         File target = new File(userDir+"/screenshots/fullpagess.png");
         source.renameTo(target);
-        driver.quit();
+        
     }
 
     @Test
@@ -716,7 +716,7 @@ public class test2 {
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://testautomationpractice.blogspot.com/");
-        driver.quit();
+        
     }
 
     @Test
@@ -730,7 +730,7 @@ public class test2 {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://expired.badssl.com/");
         System.out.print(driver.getTitle());
-        driver.quit();
+        
     }
 
     @Test
@@ -744,7 +744,7 @@ public class test2 {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://expired.badssl.com/");
         System.out.print(driver.getTitle());
-        driver.quit();
+        
     }
 
     @Test
@@ -760,7 +760,7 @@ public class test2 {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://testautomationpractice.blogspot.com/");
         System.out.print(driver.getTitle());
-        driver.quit();
+        
     }
 
     @Test
@@ -801,7 +801,6 @@ public class test2 {
             }
         }
         System.out.println("Total broken links: "+count);
-        driver.quit();
 
     }
 
@@ -824,7 +823,6 @@ public class test2 {
         SearchContext multiNestedShadow = nestedShadow.findElement(By.cssSelector("#nested-shadow-dom")).getShadowRoot();
         String multiNestedShadowDom = multiNestedShadow.findElement(By.cssSelector("#multi-nested-shadow-element")).getText();
         System.out.println("multiNestedShadowDom text: "+multiNestedShadowDom);
-        driver.quit();
     }
 
     @Test
@@ -837,7 +835,6 @@ public class test2 {
         driver.findElement(By.xpath("//input[@name='password']")).sendKeys("admin123");
         driver.findElement(By.xpath("//button[@type='submit']")).click();
         driver.findElement(By.xpath("//a[@href='/web/index.php/leave/viewLeaveModule']//*[name()='svg']")).click();
-        driver.quit();
     }
 
     @Test
