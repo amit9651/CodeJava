@@ -729,7 +729,7 @@ public class test2 {
         //options.addArguments("--headless=new");
         options.setAcceptInsecureCerts(true);
         options.setExperimentalOption("excludeSwitches",new String[]{"enable-automation"});
-        WebDriver driver = new ChromeDriver(options);
+        driver = new ChromeDriver(options);
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://expired.badssl.com/");
@@ -743,7 +743,7 @@ public class test2 {
         options.addArguments("--incognito");
         options.setExperimentalOption("excludeSwitches",new String[]{"enable-automation"});
         options.setAcceptInsecureCerts(true);
-        WebDriver driver = new ChromeDriver(options);
+        driver = new ChromeDriver(options);
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://expired.badssl.com/");
@@ -753,17 +753,18 @@ public class test2 {
 
     @Test
     public void enableExtension(){
-        ChromeOptions options = new ChromeOptions();
+        /*ChromeOptions options = new ChromeOptions();
         options.addArguments("--incognito");
         options.setExperimentalOption("excludeSwitches",new String[]{"enable-automation"});
         options.setAcceptInsecureCerts(true);
-        File file = new File(userDir+"/AdBlock.crx");
+        String userDir1 = System.getProperty("user.dir");
+        File file = new File(userDir1+"/AdBlock.crx");
         options.addExtensions(file);
-        WebDriver driver = new ChromeDriver(options);
+        driver = new ChromeDriver(options);
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://testautomationpractice.blogspot.com/");
-        System.out.print(driver.getTitle());
+        System.out.print(driver.getTitle());*/
         
     }
 
@@ -865,7 +866,8 @@ public class test2 {
 
     @Test
     public void writeExcelFile() throws IOException {
-        FileOutputStream fileOutput = new FileOutputStream(userDir+"/testdata/writetestfile.xlsx");
+        String userDir3 = System.getProperty("user.dir");
+        FileOutputStream fileOutput = new FileOutputStream(userDir3+"/testdata/writetestfile.xlsx");
         XSSFWorkbook workbook = new XSSFWorkbook();
         XSSFSheet sheet = workbook.createSheet("Data");
         XSSFRow row1 = sheet.createRow(0);

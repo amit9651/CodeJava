@@ -5,46 +5,14 @@
     <classes>
       <class name="problems.test2">
         <methods>
-          <include name="clickInAutoSuggestDD"/>
-          <include name="displayConfigfile"/>
-          <include name="takeScrennshort"/>
-          <include name="authenticationPopup"/>
-          <include name="staticWebTable"/>
-          <include name="slider"/>
-          <include name="javascriptexecutor"/>
-          <include name="svgElement"/>
-          <include name="dynamicDropdown"/>
           <include name="navigationCommands"/>
           <include name="setUp"/>
-          <include name="brokenLinks"/>
-          <include name="enableExtension"/>
-          <include name="handleSSL"/>
-          <include name="datePicker"/>
-          <include name="writeExcelFile"/>
-          <include name="incognitoMode"/>
-          <include name="tearDown"/>
-          <include name="javascriptexecutorScrolling"/>
-          <include name="actionMethods"/>
-          <include name="dropdowns"/>
-          <include name="assignmenttwo"/>
-          <include name="test"/>
-          <include name="makeMyTrip"/>
-          <include name="readExcelFile"/>
-          <include name="draganddrop"/>
-          <include name="nykaa"/>
-          <include name="assignment01"/>
-          <include name="getTextInPage"/>
-          <include name="chromeOptions"/>
           <include name="keyboardactions"/>
-          <include name="getMethods"/>
-          <include name="frame"/>
-          <include name="assignment3"/>
-          <include name="shadowDomElement"/>
-          <include name="captureAllDropdownValue"/>
-          <include name="alerts"/>
-          <include name="handleAlertWithExplicitWait"/>
-          <include name="uploadfile"/>
+          <include name="tearDown"/>
+          <include name="makeMyTrip"/>
+          <include name="enableExtension"/>
           <include name="conditionalMethods"/>
+          <include name="nykaa"/>
         </methods>
       </class> <!-- problems.test2 -->
     </classes>
